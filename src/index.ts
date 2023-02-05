@@ -1,3 +1,3 @@
 import { log } from './test';
 
-log();
+log('Hello world');
