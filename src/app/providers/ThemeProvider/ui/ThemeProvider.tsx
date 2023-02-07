@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { ThemeContext, Theme, LOCAL_STORAGE_THEME_KEY } from './ThemeContext';
+import { ThemeContext, Theme, LOCAL_STORAGE_THEME_KEY } from '../lib/ThemeContext';
 
 interface Props {
   children: React.ReactNode;
