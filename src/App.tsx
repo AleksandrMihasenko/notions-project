@@ -3,13 +3,14 @@ import { Routes, Route, Link } from 'react-router-dom';
 import { MainPageAsync } from './pages/MainPage/MainPage.async';
 import { AboutPageAsync } from './pages/AboutPage/AboutPage.async';
 import { useTheme } from './theme/useTheme';
+import { classNames } from './helpers/classNames/classNames';
 import './styles/index.scss';
 
 const App = () => {
   const { theme, toggleTheme } = useTheme();
   
   return (
-    <div className={`app ${theme}`}>
+    <div className={classNames('app', [ theme ])}>
       <Link to={'/'}>Main page</Link>
       <Link to={'/about'}>About page</Link>
       
