@@ -1,5 +1,5 @@
-import {Theme, useTheme} from 'app/providers/ThemeProvider';
-import {classNames} from 'shared/lib/classNames/classNames';
+import { Theme, useTheme } from 'app/providers/ThemeProvider';
+import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ThemeButton } from 'shared/ui/Button/Button';
 import classes from './ThemeSwitcher.module.scss';
 import LightIcon from 'shared/assets/icons/theme-light.svg';
