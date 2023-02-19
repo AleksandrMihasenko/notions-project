@@ -2,5 +2,6 @@
   "language": "English",
   "link-main": "Main page",
   "link-about": "About page",
-  "button-toggle": "Toggle"
+  "button-toggle": "Toggle",
+  "page-not-found": "Page not found"
 }

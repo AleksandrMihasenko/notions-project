@@ -2,5 +2,6 @@
   "language": "Русский",
   "link-main": "Главная",
   "link-about": "О сайте",
-  "button-toggle": "Переключить"
+  "button-toggle": "Переключить",
+  "page-not-found": "Страница не найдена"
 }
