@@ -1,8 +1,8 @@
 import { useTranslation } from 'react-i18next';
 
-const MainPage = () => {
+const MainPage = (): JSX.Element => {
   const { t } = useTranslation('main');
-  
+
   return (
     <div>
       {t('main')}

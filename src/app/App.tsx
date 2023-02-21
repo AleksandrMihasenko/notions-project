@@ -6,14 +6,14 @@ import { Sidebar } from 'widgets/Sidebar';
 import { classNames } from 'shared/lib/classNames/classNames';
 import './styles/index.scss';
 
-const App = () => {
+function App(): JSX.Element {
   const { theme } = useTheme();
-  
+
   return (
-    <div className={classNames('app', [ theme ])}>
+    <div className={classNames('app', [theme])}>
       <Suspense fallback=''>
         <Navbar />
-  
+
         <div className='content-page'>
           <Sidebar />
           <AppRouter />
@@ -21,6 +21,6 @@ const App = () => {
       </Suspense>
     </div>
   );
-};
+}
 
 export default App;
