@@ -3,5 +3,8 @@
   "link-main": "Main page",
   "link-about": "About page",
   "button-toggle": "Toggle",
-  "page-not-found": "Page not found"
+  "page-not-found": "Page not found",
+  "page-error": "Something went wrong.",
+  "reload-page": "Reload page",
+  "throw-error": "Throw error"
 }

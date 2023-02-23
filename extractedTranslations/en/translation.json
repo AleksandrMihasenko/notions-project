@@ -5,5 +5,8 @@
   "link-about": "link-about",
   "link-main": "link-main",
   "main": "main",
-  "page-not-found": "page-not-found"
+  "page-error": "page-error",
+  "page-not-found": "page-not-found",
+  "reload-page": "reload-page",
+  "throw-error": "throw-error"
 }

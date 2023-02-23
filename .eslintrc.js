@@ -27,6 +27,7 @@ module.exports = {
     '@typescript-eslint/naming-convention': 'off',
     '@typescript-eslint/no-floating-promises': 'off',
     '@typescript-eslint/no-non-null-assertion': 'off',
+    '@typescript-eslint/explicit-function-return-type': 'warn',
     'import/no-unresolved': 'off',
     'import/no-extraneous-dependencies': 'off',
   }
