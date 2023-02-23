@@ -24,6 +24,16 @@ export default {
     'node_modules',
   ],
 
+  modulePaths: [
+    '<rootDir>src',
+  ],
+
+  setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
+
+  moduleNameMapper: {
+    '\\.(s?css)$': 'identity-obj-proxy',
+  },
+
   // An array of file extensions your modules use
   moduleFileExtensions: [
     'js',
