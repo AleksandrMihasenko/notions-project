@@ -1,5 +1,5 @@
 import React from 'react';
-import {ComponentMeta, ComponentStory} from '@storybook/react';
+import { type ComponentMeta, type ComponentStory } from '@storybook/react';
 
 import AboutPage from './AboutPage';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
@@ -13,7 +13,7 @@ export default {
   },
 } as ComponentMeta<typeof AboutPage>;
 
-// @ts-ignore
+// @ts-expect-error
 const Template: ComponentStory<typeof AboutPage> = (args) => <AboutPage {...args} />;
 
 export const Normal = Template.bind({});

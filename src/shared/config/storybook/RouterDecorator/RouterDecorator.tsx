@@ -1,6 +1,6 @@
-import { ReactNode } from 'react';
+import { type ReactNode } from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { Story } from '@storybook/react';
+import { type Story } from '@storybook/react';
 import 'app/styles/index.scss';
 
 export const RouterDecorator = (story: () => Story) => {
@@ -8,5 +8,5 @@ export const RouterDecorator = (story: () => Story) => {
     <BrowserRouter>
       {story() as unknown as ReactNode}
     </BrowserRouter>
-  )
+  );
 };
