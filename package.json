@@ -92,9 +92,6 @@
     "ts-loader": "^9.4.2"
   },
   "loki": {
-    "looks-same": {
-      "ignoreCaret": true
-    },
     "configurations": {
       "chrome.laptop": {
         "target": "chrome.app",
