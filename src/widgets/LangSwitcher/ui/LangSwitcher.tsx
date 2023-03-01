@@ -7,7 +7,7 @@ interface LangSwitcherProps {
   className?: string
 }
 
-export const LangSwitcher: FC<LangSwitcherProps> = ({ className }: LangSwitcherProps): JSX.Element => {
+export const LangSwitcher: FC<LangSwitcherProps> = ({ className }: LangSwitcherProps) => {
   const { t, i18n } = useTranslation();
 
   const toggle = (): void => {
@@ -15,12 +15,12 @@ export const LangSwitcher: FC<LangSwitcherProps> = ({ className }: LangSwitcherP
   };
 
   return (
-      <Button
-        theme={ThemeButton.CLEAR}
-        className={classNames('', [className as string])}
-        onClick={toggle}
-      >
-        {t('language')}
-      </Button>
+    <Button
+      theme={ThemeButton.CLEAR}
+      className={classNames('', [className as string])}
+      onClick={toggle}
+    >
+      {t('language')}
+    </Button>
   );
 };

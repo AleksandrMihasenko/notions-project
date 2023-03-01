@@ -6,7 +6,7 @@ const MainPage = (): JSX.Element => {
 
   return (
     <div>
-      <BugButton/>
+      <BugButton />
       {t('main')}
     </div>
   );
