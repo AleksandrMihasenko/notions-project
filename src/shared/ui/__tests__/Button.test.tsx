@@ -10,6 +10,5 @@ describe('Button component', () => {
   test('test with additional classes', () => {
     render(<Button theme={ThemeButton.CLEAR}>Test</Button>);
     expect(screen.getByText('Test')).toHaveClass('clear');
-    screen.debug();
   });
 });
