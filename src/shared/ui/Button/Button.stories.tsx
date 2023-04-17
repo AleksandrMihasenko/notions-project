@@ -60,6 +60,13 @@ OutlineLightSizeXL.args = {
   size: SizeButton.XL,
 };
 
+export const Disabled = Template.bind({});
+Disabled.args = {
+  children: '>',
+  theme: ThemeButton.OUTLINE,
+  disabled: true,
+};
+
 export const BackgroundTheme = Template.bind({});
 BackgroundTheme.args = {
   children: 'Text outline dark',

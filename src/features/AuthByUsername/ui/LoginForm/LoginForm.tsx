@@ -17,7 +17,9 @@ interface LoginFormProps {
 export const LoginForm: FC<LoginFormProps> = memo(({ className }: LoginFormProps) => {
   const { t } = useTranslation();
   const dispatch = useDispatch<ThunkDispatch<any, any, any>>();
-  const { username, password } = useSelector(getLoginState);
+  const {
+    username, password, error, isLoading,
+  } = useSelector(getLoginState);
 
   const onChangeUsername = useCallback((value: string) => {
     dispatch(loginActions.setUsername(value));
@@ -33,6 +35,8 @@ export const LoginForm: FC<LoginFormProps> = memo(({ className }: LoginFormProps
 
   return (
     <div className={classNames(classes.LoginForm, [className as string])}>
+      {error && <div>{error}</div>}
+
       <Input
         type="text"
         autofocus
@@ -54,6 +58,7 @@ export const LoginForm: FC<LoginFormProps> = memo(({ className }: LoginFormProps
         className={classes.loginBtn}
         theme={ThemeButton.BACKGROUND_INVERTED}
         size={SizeButton.L}
+        disabled={isLoading}
         onClick={onLoginClick}
       >
         {t('login')}
