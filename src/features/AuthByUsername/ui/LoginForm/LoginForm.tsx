@@ -37,7 +37,7 @@ export const LoginForm: FC<LoginFormProps> = memo(({ className }: LoginFormProps
   return (
     <div className={classNames(classes.LoginForm, [className as string])}>
       <Text title={t('authorisation-form') as string} />
-      {error && <Text text={error} theme={TextTheme.ERROR} />}
+      {error && <Text text={t('invalid-login') as string} theme={TextTheme.ERROR} />}
 
       <Input
         type="text"
