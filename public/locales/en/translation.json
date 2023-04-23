@@ -2,6 +2,7 @@
   "language": "English",
   "short-language": "En",
   "login": "Login",
+  "logout": "Logout",
   "link-main": "Main page",
   "link-about": "About page",
   "button-toggle": "Toggle",
@@ -10,5 +11,7 @@
   "reload-page": "Reload page",
   "throw-error": "Throw error",
   "type-username": "Type username",
-  "type-password": "Type password"
+  "type-password": "Type password",
+  "authorisation-form": "Authorisation form",
+  "invalid-login": "Invalid login or password"
 }

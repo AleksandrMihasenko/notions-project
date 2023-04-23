@@ -5,6 +5,7 @@ import { Button, SizeButton, ThemeButton } from 'shared/ui/Button/Button';
 import { Input } from 'shared/ui/Input/Input';
 import { useDispatch, useSelector } from 'react-redux';
 import { ThunkDispatch } from '@reduxjs/toolkit';
+import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { loginByUsername } from '../../model/services/loginByUsername/loginByUsername';
 import { loginActions } from '../../model/slice/loginSlice';
 import classes from './LoginForm.module.scss';
@@ -35,7 +36,8 @@ export const LoginForm: FC<LoginFormProps> = memo(({ className }: LoginFormProps
 
   return (
     <div className={classNames(classes.LoginForm, [className as string])}>
-      {error && <div>{error}</div>}
+      <Text title={t('authorisation-form') as string} />
+      {error && <Text text={error} theme={TextTheme.ERROR} />}
 
       <Input
         type="text"

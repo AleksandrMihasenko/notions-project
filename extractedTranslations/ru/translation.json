@@ -1,10 +1,12 @@
 {
   "about": "about",
+  "authorisation-form": "authorisation-form",
   "button-toggle": "button-toggle",
   "language": "language",
   "link-about": "link-about",
   "link-main": "link-main",
   "login": "login",
+  "logout": "logout",
   "main": "main",
   "page-error": "page-error",
   "page-not-found": "page-not-found",
