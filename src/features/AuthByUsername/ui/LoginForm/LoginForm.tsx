@@ -11,11 +11,11 @@ import { loginActions } from '../../model/slice/loginSlice';
 import classes from './LoginForm.module.scss';
 import { getLoginState } from '../../model/selectors/getLoginState/getLoginState';
 
-interface LoginFormProps {
+export interface LoginFormProps {
   className?: string;
 }
 
-export const LoginForm: FC<LoginFormProps> = memo(({ className }: LoginFormProps) => {
+const LoginForm: FC<LoginFormProps> = memo(({ className }: LoginFormProps) => {
   const { t } = useTranslation();
   const dispatch = useDispatch<ThunkDispatch<any, any, any>>();
   const {
@@ -68,3 +68,5 @@ export const LoginForm: FC<LoginFormProps> = memo(({ className }: LoginFormProps
     </div>
   );
 });
+
+export default LoginForm;
