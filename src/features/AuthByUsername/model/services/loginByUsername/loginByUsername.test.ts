@@ -1,4 +1,0 @@
-describe('loginByUsername', () => {
-  test('test', () => {
-  });
-});
