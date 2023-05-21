@@ -24,16 +24,6 @@
   padding: 20px 30px;
 }
 
-.link {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.text {
-  opacity: 1;
-}
-
 .collapsedBtn {
   position: absolute;
   right: -32px;
@@ -57,11 +47,5 @@
   .navigation {
     align-items: center;
     padding: 0;
-  }
-
-  .text {
-    width: 0;
-    opacity: 0;
-    transition: all .25s ease-in-out;
   }
 }

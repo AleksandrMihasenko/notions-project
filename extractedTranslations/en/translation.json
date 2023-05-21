@@ -11,6 +11,7 @@
   "main": "main",
   "page-error": "page-error",
   "page-not-found": "page-not-found",
+  "profile": "",
   "reload-page": "reload-page",
   "throw-error": "throw-error",
   "type-password": "type-password",

@@ -1,4 +1,4 @@
-import { type FC } from 'react';
+import { type FC, memo } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Theme } from 'app/providers/ThemeProvider';
 import classes from './Text.module.scss';
@@ -15,7 +15,7 @@ interface TextProps {
   theme?: TextTheme;
 }
 
-export const Text: FC<TextProps> = (props) => {
+export const Text = memo((props: TextProps) => {
   const {
     className,
     title,
@@ -33,4 +33,4 @@ export const Text: FC<TextProps> = (props) => {
       {text && <p className={classes.text}>{text}</p>}
     </div>
   );
-};
+});
