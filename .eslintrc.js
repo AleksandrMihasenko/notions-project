@@ -4,6 +4,7 @@ module.exports = {
     es2021: true,
   },
   extends: [
+    'eslint:recommended',
     'plugin:react/recommended',
     'airbnb',
     'plugin:storybook/recommended',
@@ -45,12 +46,13 @@ module.exports = {
     'import/no-unresolved': 'off',
     'import/prefer-default-export': 'off',
     'import/no-extraneous-dependencies': 'off',
-    'no-unused-vars': 'warn',
     'no-shadow': 'off',
     'no-void': 'off',
     'no-undef': 'off',
     'no-restricted-globals': 'off',
     'no-underscore-dangle': 'off',
     'no-param-reassign': 'off',
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': 'off',
   },
 };

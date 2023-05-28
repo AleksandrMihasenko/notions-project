@@ -4,6 +4,7 @@ import { type ComponentMeta, type ComponentStory } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 import ProfilePage from 'pages/ProfilePage/ui/ProfilePage';
+import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 
 export default {
   title: 'pages/ProfilePage',
@@ -16,9 +17,10 @@ export default {
 // @ts-expect-error
 const Template: ComponentStory<typeof ProfilePage> = (args) => <ProfilePage {...args} />;
 
-export const Normal = Template.bind({});
-Normal.args = {};
+export const Light = Template.bind({});
+Light.args = {};
+Light.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({}, {})];
 
 export const Dark = Template.bind({});
 Dark.args = {};
-Dark.decorators = [ThemeDecorator(Theme.DARK)];
+Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({}, {})];
