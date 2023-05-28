@@ -17,6 +17,10 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
+  globals: {
+    __IS_DEC__: true,
+    __API__: true,
+  },
   plugins: [
     'react',
     'react-hooks',
