@@ -5,7 +5,9 @@ import { loginReducer } from 'features/AuthByUsername/model/slice/loginSlice';
 import { profileReducer } from 'entities/Profile';
 
 const defaultAsyncReducers: DeepPartial<ReducersMapObject<StateSchema>> = {
+  // @ts-ignore
   loginForm: loginReducer,
+  // @ts-ignore
   profile: profileReducer,
 };
 
