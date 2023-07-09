@@ -28,3 +28,6 @@ jobs:
       - name: linting css
         run: npm run lint:scss
         if: always()
+      - name: build storybook
+        run: npm run storybook:build
+        if: always()
