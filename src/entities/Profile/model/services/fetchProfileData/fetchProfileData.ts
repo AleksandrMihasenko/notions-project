@@ -3,7 +3,11 @@ import i18n from 'shared/config/i18n/i18n';
 import { ThunkConfig } from 'app/providers/StoreProvider';
 import { Profile } from '../../types/profile';
 
-export const fetchProfileData = createAsyncThunk<Profile, void, ThunkConfig<string>>(
+export const fetchProfileData = createAsyncThunk<
+    Profile,
+    void,
+    ThunkConfig<string>
+>(
   'profile/fetchProfileData ',
   async (_, thunkAPI) => {
     const { extra, dispatch, rejectWithValue } = thunkAPI;

@@ -1,5 +1,5 @@
 import React, {
-  type FC, KeyboardEvent,
+  type FC, KeyboardEvent, MutableRefObject,
   ReactNode,
   useCallback,
   useEffect,
@@ -7,8 +7,9 @@ import React, {
   useState,
 } from 'react';
 import { Portal } from 'shared/ui/Portal/Portal';
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import { useTheme } from 'app/providers/ThemeProvider';
+import { TimeoutId } from '@reduxjs/toolkit/dist/query/core/buildMiddleware/types';
 import classes from './Modal.module.scss';
 
 interface ModalProps {
@@ -32,7 +33,7 @@ export const Modal: FC<ModalProps> = (props) => {
 
   const [isClosing, setIsClosing] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
-  const timerRef = useRef<ReturnType<typeof setTimeout>>();
+  const timerRef = useRef() as MutableRefObject<ReturnType<typeof setTimeout>>;
   const { theme } = useTheme();
 
   const closeHandler = useCallback(() => {
@@ -74,7 +75,7 @@ export const Modal: FC<ModalProps> = (props) => {
     };
   }, [isOpen, onKeyDown]);
 
-  const mods: Record<string, boolean | undefined> = {
+  const mods: Mods = {
     [classes.opened]: isOpen,
     [classes.isClosing]: isClosing,
   };

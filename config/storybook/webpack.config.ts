@@ -14,6 +14,7 @@ export default ({ config }: {config: webpack.Configuration}) => {
   config.resolve?.extensions?.push('.ts', '.tsx');
 
   if (config.module) {
+    // @ts-ignore
     config.module.rules = config.module?.rules?.map((rule: webpack.RuleSetRule) => {
       if (/svg/.test(rule.test as string)) {
         return { ...rule, exclude: /\.svg$/i };

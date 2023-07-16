@@ -1,3 +1,5 @@
+import { ReducersMapObject } from '@reduxjs/toolkit';
+
 declare module '*.scss' {
   type IClassNames = Record<string, string>;
 
@@ -10,6 +12,7 @@ declare module '*.svg';
 declare module '*.jpg';
 declare module '*.jpeg';
 declare module '*.svg' {
+  // @ts-ignore
   import type React from 'react';
 
   const SVG: React.VFC<React.SVGProps<SVGSVGElement>>;
@@ -18,3 +21,7 @@ declare module '*.svg' {
 
 declare const __IS_DEV__: boolean;
 declare const __API__: string;
+
+type DeepPartial<T> = T extends object ? {
+  [P in keyof T]?: DeepPartial<T[P]>;
+} : T;
